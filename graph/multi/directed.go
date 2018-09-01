@@ -18,6 +18,10 @@ var (
 	_ graph.Directed           = dg
 	_ graph.Multigraph         = dg
 	_ graph.DirectedMultigraph = dg
+	_ graph.NodeAdder          = dg
+	_ graph.NodeRemover        = dg
+	_ graph.LineAdder          = dg
+	_ graph.LineRemover        = dg
 )
 
 // DirectedGraph implements a generalized directed graph.

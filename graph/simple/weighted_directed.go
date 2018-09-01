@@ -11,6 +11,19 @@ import (
 	"gonum.org/v1/gonum/graph/internal/uid"
 )
 
+var (
+	wdg *WeightedDirectedGraph
+
+	_ graph.Graph             = wdg
+	_ graph.Weighted          = wdg
+	_ graph.Directed          = wdg
+	_ graph.WeightedDirected  = wdg
+	_ graph.NodeAdder         = wdg
+	_ graph.NodeRemover       = wdg
+	_ graph.WeightedEdgeAdder = wdg
+	_ graph.EdgeRemover       = wdg
+)
+
 // WeightedDirectedGraph implements a generalized weighted directed graph.
 type WeightedDirectedGraph struct {
 	nodes map[int64]graph.Node
